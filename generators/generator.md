@@ -1,7 +1,7 @@
 ## Generator
 
 Generator function is like the normal function but it makes it as special by using special character (*).
-We can Generator object from Generator function. It conforms to both Iterable protocal and Iterator protocal.
+We can create Generator object from Generator function. It conforms to both Iterable protocal and Iterator protocal.
 
 It is the subclass of hidden Iterator class.
 
@@ -47,7 +47,7 @@ Example:
 ```js
 
 const person = {};
-person[Symbol.iterator] = function() {
+person[Symbol.iterator] = function() { // @@iterator method
     return {
         next: function() {
             return {
@@ -57,4 +57,7 @@ person[Symbol.iterator] = function() {
         }
     }
 }
+
+const iteratorObj = person[Symbol.iterator]();
+iteratorObj.next();
 ```
