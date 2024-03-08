@@ -51,3 +51,17 @@ console.group('==Handler1==');
 const proxy1 = new Proxy(target, handler1);
 console.log('Property access:', proxy1.first);
 console.groupEnd('==Handler1==');
+
+/** More examples on Proxy */
+const target2 = {
+    name: 'apple',
+    location: 'Nepal'
+};
+const proxy2 = new Proxy(target2, {
+    get(target, property) {
+        if (property === 'name') return 'orange';
+        return Reflect.get(target, property);
+    }
+});
+console.log(proxy2.name);
+console.log(proxy2.location);

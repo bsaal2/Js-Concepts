@@ -24,3 +24,16 @@ Example:
 ```js
    const sum = new Function('a', 'b', 'return a + b')
 ```
+
+## Call, Apply and Bind
+
+1. call
+
+It is the method of the Function prototype. So any function instance can invoke this method.
+The main advantage of using this method is that, we can pass the this argument (context in which function runs).
+This method runs the function immediately.
+
+Syntax
+```
+  sum.call(thisarg, arg1, arg2...);
+```
