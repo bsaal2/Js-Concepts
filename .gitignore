@@ -1,2 +1,6 @@
 node-concept/node_modules
 node-concept/dist
+
+#Editor settings
+.idea
+.vscode
